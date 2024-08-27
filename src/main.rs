@@ -42,11 +42,11 @@ fn find_longest_balanced_distinct_substring(s: &str) -> String {
 
             // Check if the number of distinct letters and numbers are equal
             if distinct_letters.len() == distinct_numbers.len() {
-                // If this substring is longer than the previously found one, update the longest substring
+                // if this substring is longer than the previously found one, update the longest substring
                 if current_substring.len() > longest_substr.len() {
                     longest_substr = current_substring.clone();
                 }
-                // If it’s the same length as the current longest but found earlier, keep the first one
+                // ff same length as the current longest but found earlier, keep the first one
                 if current_substring.len() == longest_substr.len() && longest_substr.is_empty() {
                     longest_substr = current_substring.clone();
                 }
